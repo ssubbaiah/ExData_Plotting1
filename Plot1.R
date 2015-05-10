@@ -23,9 +23,9 @@ memmsg
 data<-read.table(".\\ExpAnalysis_P1_Data\\household_power_consumption.txt", sep=";", header=TRUE, dec=".",stringsAsFactors=FALSE)
 datasubset <- data[data$Date %in% c( "1/2/2007","2/2/2007"),]
 gpa <- as.numeric(datasubset$Global_active_power)
+png(".\\ExpAnalysis_P1_Data\\plot1.png",480,480)
 hist(gpa, col="red", main="Global Active Power", xlab="Global Active Power (kilowattts)")
-dev.copy(png,file=".\\ExpAnalysis_P1_Data\\plot1.png")
 dev.off()
 
-#end of code Plot1.R
+#end of code Plot1.R.
 
